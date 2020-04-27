@@ -47,7 +47,7 @@ const LoginForm = () => {
     }
 
     return(
-        <div>
+        <div className="LoginWrapper">
             <h2>{(!needsAccount) ? "Log In" : "Create an Account"}</h2>
             <form>
                 <label htmlFor="Username" >Username</label>
