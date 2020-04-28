@@ -46,8 +46,9 @@ const LoginForm = props => {
                 .post("/api/auth/register", credentials)
                 .then(res => {
                     console.log({res});
-                    alert("Successfully Created Account")
-                    needsAccount = !needsAccount;
+                    alert('Sucessfully created Account')
+                    setNeedsAccount(!needsAccount)
+                    // push history to homepage 
                 })
                 .catch(err => console.log(err))
         }

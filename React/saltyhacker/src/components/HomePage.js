@@ -12,10 +12,10 @@ const HomePage = () => {
     return (
         <Container>
             <Row>
-                <Col xs='9'>
+                <Col xs='8'>
                     <CommentList />
                 </Col>
-                <Col xs='3'>
+                <Col xs='4'>
                     <Route exact path = "/"><LoginForm /></Route>
                     <ProtectedRoute exact path="/letmein" component={SavedList} />
                 </Col>

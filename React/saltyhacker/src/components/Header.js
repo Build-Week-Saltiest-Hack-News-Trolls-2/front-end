@@ -10,6 +10,7 @@ justify-content: space-between;
 align-items: center;
 background: #C46022;
 padding 0.3% 1%;
+margin-bottom: 60px;
 `
 const SearchWrapper = styled.div`
 width: 30%;
