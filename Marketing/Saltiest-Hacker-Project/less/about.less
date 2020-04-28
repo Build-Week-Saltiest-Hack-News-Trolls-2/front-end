@@ -1,0 +1,112 @@
+// .headline{
+    
+//     background-color: @header-color;
+//     font-family: @header-font;
+
+//     display:flex;
+//     justify-content:space-between;
+//     align-items: center;
+
+//     // padding-bottom: 30px;
+//     // border-bottom: 4px dashed @accent-color;
+//     // padding:1% 1%;
+//     margin: 0 auto;
+//     img{
+//         // max-width: 10%;
+//     }
+// }
+
+
+.main_container{
+    background-color: @background-color;
+    margin: 2% 2%;
+    border: 1px inset @accent-color;
+    padding: 4% 4%;
+
+    font-size: 1.6rem;
+    font-family: @sprinkle-font;
+    text-shadow: 2px 2px 3px @accent-color;
+
+    h3{
+        font-family: @header-font;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 3px @accent-color;
+    }
+
+    .pictures{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap:wrap;
+        // flex-direction: column;
+
+        
+
+        .projectLead{
+                 border: 2px inset @accent-color;
+                 padding:2%;
+                margin: 2%;
+                 display:flex;
+                 flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
+
+                img{
+                @media @mobile{
+                    width:80%;
+                }
+                }
+        }
+
+        .MLEngineer{
+            border: 2px inset @accent-color;
+                 padding:2% 6%;
+                margin: 2%;
+                display:flex;
+                flex-direction: column;
+               justify-content: center;
+               align-items: center;
+
+               background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
+
+               .pics{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                
+                .singlePic{
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    padding:2%;
+                    margin:0 auto;
+
+                    border: 1px inset @header-color;
+                }
+                
+                @media(max-width:1800px){
+                    flex-direction: column;
+                }
+
+                img{
+                    @media @mobile{
+                        width:80%;
+                    }
+                }
+
+               }//end of .pics
+
+        }// end of .MLEngineer
+
+        @media (max-width:1800px){
+            flex-direction: column;
+        }
+
+    }//end .pictures
+
+}//end .main_container
