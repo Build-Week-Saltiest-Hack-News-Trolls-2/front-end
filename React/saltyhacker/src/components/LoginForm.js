@@ -2,14 +2,17 @@ import React, {useState} from "react";
 import {axiosWithAuth} from "../utils/AxiosWithAuth";
 import styled from "styled-components";
 import { Form, Label, Input, Button } from 'reactstrap'
-
+import {useHistory} from "react-router-dom";
+   
 const AltInstructions = styled.span`
 text-decoration: underline;
 cursor: pointer;
 font-size: 0.8rem;
 `
 
-const LoginForm = () => {
+const LoginForm = props => {
+    const {push} = useHistory();
+
     const [needsAccount, setNeedsAccount ] = useState(false);
     const [credentials, setCredentials] = useState({
         username: "",
@@ -27,21 +30,20 @@ const LoginForm = () => {
         e.preventDefault();
         if(!needsAccount) {
             axiosWithAuth()
-                .post("/api/login", credentials)
+                .post("/api/auth/login", credentials)
                 .then(res => {
                     console.log({res});
-                    localStorage.setItem('token', JSON.stringify(res.data))
-                    // push history to homepage 
+                    localStorage.setItem('token', JSON.stringify(res.data.token))
+                    push('/letmein');
                 })
                 .catch(err => console.log(err))
         }
         if(needsAccount) {
             axiosWithAuth()
-                .post("/api/signup", credentials)
+                .post("/api/auth/register", credentials)
                 .then(res => {
                     console.log({res});
-                    localStorage.setItem('token', JSON.stringify(res.data))
-                    // push history to homepage 
+                    alert("Successfully Created Account")
                 })
                 .catch(err => console.log(err))
         }
@@ -50,7 +52,7 @@ const LoginForm = () => {
     return(
         <div className="LoginWrapper">
             <h2>{(!needsAccount) ? "Log In" : "Create an Account"}</h2>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Label htmlFor="Username" >Username</Label>
                 <Input 
                 type="text"
