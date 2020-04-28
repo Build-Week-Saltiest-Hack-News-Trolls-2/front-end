@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from "react";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import styled from "styled-components";
@@ -58,3 +59,20 @@ const Header = () =>{
 }
 
 export default Header;
+=======
+import React from 'react'
+
+const Header = () => {
+
+    return (
+        <header>
+            <h3>Salty Hacker</h3>
+            <nav>
+            Other Navy type stuff
+            </nav>
+        </header>
+    )
+}
+
+export default Header
+>>>>>>> 417ad0adb46cc8dd187ae12ec6f6e965041325a8

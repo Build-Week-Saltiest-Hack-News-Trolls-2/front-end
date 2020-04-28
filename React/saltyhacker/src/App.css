@@ -1,22 +1,17 @@
-.App {
-  text-align: center;
+.comment-username {
+  width: 20%;
+  text-align: center
+}
+.comment-text {
+  width:75%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 100px;
+  background-color: orange;
+  width: 100%;
   display: flex;
+<<<<<<< HEAD
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -54,4 +49,7 @@ nav a{
 
 .LoginWrapper input {
   margin: 1.5%;
+=======
+  justify-content: space-evenly;
+>>>>>>> 417ad0adb46cc8dd187ae12ec6f6e965041325a8
 }

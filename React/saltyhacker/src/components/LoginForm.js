@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {axiosWithAuth} from "../utils/AxiosWithAuth";
 import styled from "styled-components";
+import { Form, Label, Input, Button } from 'reactstrap'
 
 const AltInstructions = styled.span`
 text-decoration: underline;
@@ -49,27 +50,27 @@ const LoginForm = () => {
     return(
         <div className="LoginWrapper">
             <h2>{(!needsAccount) ? "Log In" : "Create an Account"}</h2>
-            <form>
-                <label htmlFor="Username" >Username</label>
-                <input 
+            <Form>
+                <Label htmlFor="Username" >Username</Label>
+                <Input 
                 type="text"
                 name="username"
                 placeholder="Username"
                 value={credentials.username}
                 onChange={handleChanges}
-                /> <br />
-                <label htmlFor="Password" >Password</label>
-                <input 
+                /> 
+                <Label htmlFor="Password" >Password</Label>
+                <Input 
                 type="password"
                 name="password"
                 placeholder="Password"
                 value={credentials.password}
                 onChange={handleChanges}
-                /> <br />
+                /> 
                 <div>
-                    <button>{(!needsAccount) ? "Log In" : "Create Account"}</button> <p>or <AltInstructions onClick={()=> setNeedsAccount(!needsAccount)}>{(!needsAccount) ? "Create an Account" : "Log in with Existing Account"}</AltInstructions> </p>
+                    <Button>{(!needsAccount) ? "Log In" : "Create Account"}</Button> <p>or <AltInstructions onClick={()=> setNeedsAccount(!needsAccount)}>{(!needsAccount) ? "Create an Account" : "Log in with Existing Account"}</AltInstructions> </p>
                 </div>
-            </form>
+            </Form>
         </div>
     )
 }
