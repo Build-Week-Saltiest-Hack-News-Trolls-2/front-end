@@ -41,6 +41,7 @@ const LoginForm = () => {
                 .then(res => {
                     console.log({res});
                     alert('Sucessfully created Account')
+                    setNeedsAccount(!needsAccount)
                     // push history to homepage 
                 })
                 .catch(err => console.log(err))

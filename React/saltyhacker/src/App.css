@@ -6,6 +6,13 @@
   width:75%;
 }
 
+.comment {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
 nav a{
   text-decoration: none;
   color: black;
@@ -19,6 +26,7 @@ nav a{
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  padding: 5px;
 }
 
 .LoginWrapper input {
