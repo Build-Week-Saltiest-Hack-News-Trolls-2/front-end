@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage"
 import Header from "./components/Header";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Homepage from './components/HomePage'
 
 function App() {
   return (
