@@ -28,19 +28,27 @@ const Header = () =>{
     const handleLogout = () =>{
         alert("You have been logged out");
         localStorage.removeItem("token");
+        window. location. reload(false);
     }
 
     const submitSearch = e => {
         e.preventDefault();
-        // get the list of comments/users/whatever is being searched for
-        // filter the comments to only include results 
+    }
+
+    const HomeButton = () =>{
+        if(localStorage.getItem("token")){
+            return(<Link to="/letmein">Home</Link>)
+        }
+        else{
+            return(<Link to="/">Home</Link>)
+        }
     }
 
     return(
         <MainNav>
             <h2>Saltiest Hacker Troll</h2>
-            <Link to="/">Home</Link>
-            <Link to="/login">Log In</Link>
+            
+            {HomeButton()}
             <Link onClick={handleLogout} to="/">Log Out</Link>
             <SearchWrapper>
                 <form>

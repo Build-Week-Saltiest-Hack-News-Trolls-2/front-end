@@ -2,14 +2,17 @@ import React, {useState} from "react";
 import {axiosWithAuth} from "../utils/AxiosWithAuth";
 import styled from "styled-components";
 import { Form, Label, Input, Button } from 'reactstrap'
-
+import {useHistory} from "react-router-dom";
+   
 const AltInstructions = styled.span`
 text-decoration: underline;
 cursor: pointer;
 font-size: 0.8rem;
 `
 
-const LoginForm = () => {
+const LoginForm = props => {
+    const {push} = useHistory();
+
     const [needsAccount, setNeedsAccount ] = useState(false);
     const [credentials, setCredentials] = useState({
         username: "",
@@ -31,9 +34,12 @@ const LoginForm = () => {
                 .then(res => {
                     console.log({res});
                     localStorage.setItem('token', JSON.stringify(res.data.token))
-                    // push history to homepage 
+                    push('/letmein');
+                    window. location. reload(false);
                 })
-                .catch(err => console.log(err))
+                .catch(err => {
+                    alert("Username or Password Incorrect")
+                })
         }
         if(needsAccount) {
             axiosWithAuth()
