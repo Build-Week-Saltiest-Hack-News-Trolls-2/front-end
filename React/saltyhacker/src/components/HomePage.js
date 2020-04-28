@@ -9,9 +9,6 @@ const HomePage = () => {
     return (
         <Container>
             <Row>
-                <Header />
-            </Row>
-            <Row>
                 <Col xs='9'>
                     <CommentList />
                 </Col>
