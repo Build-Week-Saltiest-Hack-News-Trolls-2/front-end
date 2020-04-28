@@ -35,8 +35,11 @@ const LoginForm = props => {
                     console.log({res});
                     localStorage.setItem('token', JSON.stringify(res.data.token))
                     push('/letmein');
+                    window. location. reload(false);
                 })
-                .catch(err => console.log(err))
+                .catch(err => {
+                    alert("Username or Password Incorrect")
+                })
         }
         if(needsAccount) {
             axiosWithAuth()
@@ -44,6 +47,7 @@ const LoginForm = props => {
                 .then(res => {
                     console.log({res});
                     alert("Successfully Created Account")
+                    needsAccount = !needsAccount;
                 })
                 .catch(err => console.log(err))
         }
