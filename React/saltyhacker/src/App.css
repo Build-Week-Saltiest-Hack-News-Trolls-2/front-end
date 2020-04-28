@@ -6,10 +6,21 @@
   width:75%;
 }
 
-header {
-  height: 100px;
-  background-color: orange;
-  width: 100%;
+nav a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.LoginWrapper{
+  width: 20%;
+  margin: 3% auto;
+  border: 3px solid #F34213;
+  border-radius: 20px;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.LoginWrapper input {
+  margin: 1.5%;
 }
