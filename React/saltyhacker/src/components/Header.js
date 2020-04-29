@@ -1,6 +1,8 @@
-import React, {useState} from "react";
+import React, {useState, useContext, useEffect} from "react";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import styled from "styled-components";
+import {CommentContext} from "../contexts/CommentContext";
+import axios from "axios";
 
 const MainNav = styled.nav`
 display: flex;
@@ -21,6 +23,18 @@ width: 60%;
 
 const Header = () =>{
     const [searchText, setSearchText] = useState("");
+    const {setComments} = useContext(CommentContext);
+    const {comments} = useContext(CommentContext)
+    const [commentList, setCommentList] = useState([]);
+
+    useEffect(()=> {
+        axios.get("https://shnt.herokuapp.com/api/comments/all")
+        .then(res => {
+            setCommentList(res.data)
+        })
+        .catch(err => console.log(err))
+    }, [])
+
     const handleChanges = e => {
         setSearchText(e.target.value);
     }
@@ -33,6 +47,14 @@ const Header = () =>{
 
     const submitSearch = e => {
         e.preventDefault();
+        const searchResults = [];
+        const input = searchText.toLowerCase();
+        for(let i=0; i<commentList.length; i++){
+            if(commentList[i].user.toLowerCase().includes(input)){
+                searchResults.push(commentList[i]);
+            }
+        }
+        setComments(searchResults);
     }
 
     const HomeButton = () =>{
@@ -51,7 +73,7 @@ const Header = () =>{
             {HomeButton()}
             <Link onClick={handleLogout} to="/">Log Out</Link>
             <SearchWrapper>
-                <form>
+                <form onSubmit={submitSearch}>
                     <SearchBar
                         type="text"
                         name="search" 
