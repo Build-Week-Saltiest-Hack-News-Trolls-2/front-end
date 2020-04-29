@@ -6,7 +6,7 @@ const Comment = (props) => {
 
     const addButtonIfLogged = () =>{
         if(localStorage.getItem("token")){
-            return <Button color="primary">Save</Button>
+            return <Button color="primary" onClick={()=> console.log(entry.id)}>Save</Button>
         }
     }
 
