@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import Header from "./components/Header";
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 import {CommentContext} from "./contexts/CommentContext";
 import HomePage from "./components/HomePage"
 import {axiosWithAuth} from "./utils/AxiosWithAuth";
