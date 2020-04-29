@@ -35,3 +35,11 @@ nav a{
 .errors {
   color: red;
 }
+
+.saved-comments .comment {
+  flex-direction: column;
+}
+
+.saved-comments .comment-text {
+  width: 100%;
+}

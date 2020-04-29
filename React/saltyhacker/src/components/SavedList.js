@@ -14,7 +14,7 @@ const SavedList = ({savedList, deleteComment}) => {
     }    
 
     return(
-    <div>
+    <div className='saved-comments'>
         <h2>Saved List</h2>
         {savedList.map(saved => <Comment entry={saved} key={saved.id} onClick={deleteComment} buttonText='Remove' />)}
     </div>
