@@ -116,7 +116,7 @@ const LoginForm = props => {
                 onChange={handleChanges}
                 /> 
                 <div>
-                    <Button>{(!needsAccount) ? "Log In" : "Create Account"}</Button> <p>or <AltInstructions onClick={()=> setNeedsAccount(!needsAccount)}>{(!needsAccount) ? "Create an Account" : "Log in with Existing Account"}</AltInstructions> </p>
+                    <Button data-testid="submitButton">{(!needsAccount) ? "Log In" : "Create Account"}</Button> <p>or <AltInstructions onClick={()=> setNeedsAccount(!needsAccount)}>{(!needsAccount) ? "Create an Account" : "Log in with Existing Account"}</AltInstructions> </p>
                 </div>
             </Form>
         </div>

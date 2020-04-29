@@ -68,7 +68,7 @@ const Header = () =>{
 
     return(
         <MainNav>
-            <h2>Saltiest Hacker Troll</h2>
+            <a href="https://salty-hacker2.netlify.app"><h2>Saltiest Hacker Troll</h2></a>
             
             {HomeButton()}
             <Link onClick={handleLogout} to="/">Log Out</Link>
