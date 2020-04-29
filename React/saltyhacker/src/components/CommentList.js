@@ -1,6 +1,6 @@
 import React from 'react'
 import Comment from './Comment'
-import { ListGroup, ListGroupItem } from 'reactstrap'
+import { ListGroup } from 'reactstrap'
 
 
 const CommentList = ({comments, saveComment}) => {
