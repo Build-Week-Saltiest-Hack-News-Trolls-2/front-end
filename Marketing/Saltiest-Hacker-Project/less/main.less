@@ -16,11 +16,12 @@
 
     button{
         .custom-btn;
-
+        background-image: radial-gradient(circle, @background-color, white, @header-color);
         &:hover{
             color:white;
-            border: 3px inset @background-color;
-           background-color: rgb(199, 180, 174);
+            border: 3px inset @header-color;
+            background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
+            text-shadow: 6px 2px 2px @accent-color;
         }
     } 
 

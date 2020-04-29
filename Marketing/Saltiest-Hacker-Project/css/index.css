@@ -200,18 +200,23 @@ nav .links a:nth-child(2):hover {
   align-items: center;
 }
 .buttons button {
+  display: block;
   background-color: #D8CBC7;
   cursor: pointer;
   width: 50%;
-  height: 35px;
-  font-size: 1.2rem;
+  height: 45px;
+  font-size: 1.4rem;
   border-radius: 5px;
   color: #000000;
+  border: 2px #C46022 inset;
+  text-shadow: 5px 2px 2px #C46022;
+  background-image: radial-gradient(circle, #D8CBC7, white, #C46022);
 }
 .buttons button:hover {
   color: white;
-  border: 3px inset #D8CBC7;
-  background-color: #c7b4ae;
+  border: 3px inset #C46022;
+  background-image: radial-gradient(circle, #D8CBC7, #000000, #C46022);
+  text-shadow: 6px 2px 2px #F34213;
 }
 .container {
   font-size: 1.6rem;

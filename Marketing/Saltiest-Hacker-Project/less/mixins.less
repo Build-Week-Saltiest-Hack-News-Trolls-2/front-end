@@ -1,14 +1,16 @@
 .custom-btn(@bg-color:@background-color,@button-text:@text-color){
-    // display: block;
+     display: block;
     background-color:@bg-color;
     // margin: 0 10px 20px;
     cursor: pointer;
     width:50%;
-    height: 35px;
-    font-size: 1.2rem;
+    height: 45px;
+    font-size: 1.4rem;
     border-radius: 5px;
     color: @button-text;
-    // border: 1px @header-color inset;
+    border: 2px @header-color inset;
+
+    text-shadow: 5px 2px 2px @header-color;
 }
 
 .flexus(@justify,@align){
