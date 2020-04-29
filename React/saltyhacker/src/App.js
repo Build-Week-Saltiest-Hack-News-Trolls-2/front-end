@@ -4,26 +4,32 @@ import Header from "./components/Header";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import {CommentContext} from "./contexts/CommentContext";
 import HomePage from "./components/HomePage"
-import axios from "axios";
+import {axiosWithAuth} from "./utils/AxiosWithAuth";
 
 function App() {
-  const [comments, setComments] = useState([]);
-  
-  useEffect(()=>{
-    axios.get("") // this will fetch the whole list of commments and set them to global state
-    .then(res=> {
-      setComments(res);
-    })
-    .catch(err=>{
-      console.log(err);
-    })
-  }, [])
+  const [comments, setComments] = useState([])
+
+  const getComments = () => {
+      axiosWithAuth()
+                .get("/api/comments/all")
+                .then(res => {
+                    setComments(res.data)
+                })
+                .catch(err => console.log(err))
+  }
+
+  useEffect(() => {
+      getComments()
+  },[])
+
 
   return (
     <Router >
       <div className="App">
-        <Header />
-        <HomePage />
+        <CommentContext.Provider value={{comments, setComments}}>
+          <Header />
+          <HomePage />
+        </CommentContext.Provider>
       </div>
     </Router>
   )

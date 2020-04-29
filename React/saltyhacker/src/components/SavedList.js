@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { axiosWithAuth } from '../utils/AxiosWithAuth'
 import Comment from './Comment'
+import {CommentContext} from "../contexts/CommentContext"
 
 const SavedList = () => {
 
 const [savedList, setSavedList] = useState()
+const {comments} = useContext(CommentContext)
 
 useEffect(() => {
     axiosWithAuth().get("/api/comments/")

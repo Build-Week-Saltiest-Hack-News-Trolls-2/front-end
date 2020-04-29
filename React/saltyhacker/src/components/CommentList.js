@@ -1,30 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import styled from 'styled-components'
 import { axiosWithAuth } from '../utils/AxiosWithAuth'
 import Comment from './Comment'
 import axios from 'axios'
 import { Button } from 'reactstrap'
+import {CommentContext} from "../contexts/CommentContext";
 
 
 
 const CommentList = () => {
-
-const [comments, setComments] = useState([])
-
-const getComments = () => {
-    axiosWithAuth()
-                .get("/api/comments/all")
-                .then(res => {
-                    setComments(res.data)
-                    // push history to homepage 
-                })
-                .catch(err => console.log(err))
-}
-
-useEffect(() => {
-    getComments()
-},[])
-
+    const {comments} = useContext(CommentContext)
 
     return (
         <div>
