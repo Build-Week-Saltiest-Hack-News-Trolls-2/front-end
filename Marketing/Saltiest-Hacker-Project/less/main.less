@@ -1,0 +1,128 @@
+
+   
+*{
+    background-color: background-color;
+    font-size: 1.6rem;
+    font-family: @paragraph-font;
+    color: @text-color;
+}
+
+.buttons{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    // flex-direction:column;
+
+    button{
+        .custom-btn;
+        background-image: radial-gradient(circle, @background-color, white, @header-color);
+        &:hover{
+            color:white;
+            border: 3px inset @header-color;
+            background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
+            text-shadow: 6px 2px 2px @accent-color;
+        }
+    } 
+
+}
+
+.container{
+
+    font-size: 1.6rem;
+    // display:flex;
+    // // flex-direction:column;
+    // justify-content: center;
+    // align-items: center;
+    
+
+    margin: 2% 2%;
+    padding:4% 4%;
+    background-color: @background-color;
+    border: inset @header-color 1px;
+
+    
+  section{
+      padding-bottom:10%;
+  }
+
+    .text{
+
+    p{
+        font-family: @paragraph-font;
+        padding: 2%;
+    }
+
+    img{
+        max-width: 30%;
+
+        &:hover{
+            
+            transform: rotateY(180deg);
+
+            // -ms-transform: rotate(20deg); 
+            // transform: rotate(20deg); 
+        }
+    }
+    
+
+        .title-text{
+            font-size: 1.7rem;
+            width:80%;
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding:2% 0;
+            
+            h3{
+                padding:0 2%;
+            }
+           
+
+            img{
+                max-width: 90px;
+                // width:10%;
+
+            }
+
+            @keyframes example {
+                0%   {color: white;}
+                50%  {color: @text-color;}
+                100% { color:white;}
+            
+              }
+
+              
+
+            @media @mobile{
+                width:100%;
+                flex-direction: column;
+                text-align: center;
+            }
+
+
+        }//end .title-text
+
+        .title-text :nth-child(2){
+            font-size: 1.2rem;
+            font-family: @sprinkle-font;
+
+            animation-name: example;
+            animation-duration: 10s;
+          //   animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+
+    }//end text
+
+    h2{
+        font-weight:bold;
+    }
+
+    img{
+        max-width: 80%;
+    }
+    
+}
+

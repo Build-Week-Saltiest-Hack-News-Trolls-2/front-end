@@ -1,0 +1,159 @@
+nav{
+
+    background-color: @header-color;
+    font-family: @header-font;
+
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+
+    // padding-bottom: 30px;
+    // border-bottom: 4px dashed @accent-color;
+    padding:1% 1%;
+    margin: 0 auto;
+
+
+        .text-logo{
+            font-size: 1.2rem;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items:space-between;
+
+
+            h1{
+                font-family:@sprinkle-font ;
+              
+                }
+
+                
+                h2{
+                    font-size:1.8rem;
+                    font-weight: bold;
+  
+                }
+
+                
+        } // end .text-logo
+
+
+    .logo{
+        
+        // background-image: url('../images/troll2resized.jpg' );
+        // background-size: 100%;
+        // background-repeat: no-repeat;
+
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        
+        
+        height:10vh;
+
+
+        
+    }// end .logo
+
+    img{
+       height:10vh; 
+    //    transition: width 5s;
+    // transition-delay: 1s;
+
+       &:hover{
+        // width: 100%;
+        transform: rotateY(180deg);
+       }
+
+       @media @mobile{
+           height: 8vh;
+           width:100%;
+       }
+    }
+    
+
+    .links{
+        width: 40%;
+        display:flex;
+        justify-content: flex-end;
+        align-items:center;
+
+        a{
+            font-size: 1.9rem;
+            font-weight: bold;
+        text-decoration: none;
+
+        // &:hover{
+        //     // color:white;
+        //     // font-size:2.5rem;
+        //     // transition-delay: 1s;
+            
+        // }
+
+        &:nth-child(1){
+                border-right: solid 3px @text-color;
+                padding-right:2%;
+                opacity: .7;
+                transition: border-width 0.6s ease; color:@text-color; 
+            }
+
+            &:nth-child(2){
+                padding-right:2%;
+                transition: border-width 0.6s ease; color:@text-color; 
+            }
+
+        &:nth-child(1):hover{
+           color:white;
+            border-width:10px;
+            border-style: inset;
+            border-color:rgb(202, 104, 44);
+        }
+
+        &:nth-child(2):hover{
+            margin:2%;
+            opacity: .8;
+            color:white;
+             border-width:10px;
+             border-style: inset;
+             border-color:rgb(202, 104, 44);
+         }
+
+        
+        
+
+        @media @mobile{
+            padding: 0 10%;
+        }
+        }//end a
+
+        // a:nth-child(1){
+        //     border-right: solid 3px @text-color;
+        //     padding-right:2%;
+        //     opacity: .7;
+        //     transition: border-width 0.6s ease; color:@text-color; 
+        // }
+
+        @media @mobile{
+            justify-content: center;
+            align-items: center;
+            padding: 4% 0;
+        }
+
+       
+
+    } //end .links
+
+    @media @mobile{
+    // background-color:@accent-color;
+    flex-direction: column;
+    width:100%;
+    margin:0 auto;
+    padding: 4% 0;
+    }
+
+   
+
+}//end nav
+
+#navigation{
+    height:5vh;
+}
