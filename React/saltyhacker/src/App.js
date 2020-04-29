@@ -1,14 +1,24 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
-import CommentList from "./components/CommentList"
-import LoginForm from "./components/LoginForm";
-import HomePage from "./components/HomePage"
 import Header from "./components/Header";
-import ProtectedRoute from "./components/ProtectedRoute";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Homepage from './components/HomePage'
+import {CommentContext} from "./contexts/CommentContext";
+import HomePage from "./components/HomePage"
+import axios from "axios";
 
 function App() {
+  const [comments, setComments] = useState([]);
+  
+  useEffect(()=>{
+    axios.get("") // this will fetch the whole list of commments and set them to global state
+    .then(res=> {
+      setComments(res);
+    })
+    .catch(err=>{
+      console.log(err);
+    })
+  }, [])
+
   return (
     <Router >
       <div className="App">
