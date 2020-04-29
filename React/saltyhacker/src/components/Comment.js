@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'reactstrap'
+import { Button, ListGroupItem } from 'reactstrap'
 
 
 const Comment = (props) => {
@@ -8,18 +8,20 @@ const Comment = (props) => {
     const addButtonIfLogged = () =>{
 
         if(localStorage.getItem("token")){
-            return <Button color={(buttonText === 'Save' ? 'primary' : 'danger')} value={entry.id} onClick={onClick}>{buttonText}</Button>
+            return <Button color={(buttonText === 'Save' ? 'primary' : 'danger')} value={entry.id} onClick={onClick} >{buttonText} </Button>
         }
     }
 
     return (
-        <div className='comment'>
-            <div className='comment-username'>
-                <h3>{entry.user}</h3>
+        <ListGroupItem>
+            <div className='comment'>
+                <div className='comment-username'>
+                    <h3>{entry.user}</h3>
+                </div>
+                <div className='comment-text'>{entry.comment}</div>
                 {addButtonIfLogged()}
             </div>
-            <div className='comment-text'>{entry.comment}</div>
-        </div>
+        </ListGroupItem>
     )
 
 }
