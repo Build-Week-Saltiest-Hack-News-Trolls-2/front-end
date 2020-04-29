@@ -6,16 +6,20 @@ import {CommentContext} from "../contexts/CommentContext"
 const SavedList = () => {
 
 const [savedList, setSavedList] = useState()
+const [toAdd, setToAdd] = useState(null)
 const {comments} = useContext(CommentContext)
 
+
+
 useEffect(() => {
+    //saveComment()
     axiosWithAuth().get("/api/comments/")
     .then(res => {
         setSavedList([...savedList, res.data])
         // push history to homepage 
     })
     .catch(err => console.log(err))
-},[])
+},[comments])
 
     if (savedList === undefined || savedList.length === 0) {
         return (

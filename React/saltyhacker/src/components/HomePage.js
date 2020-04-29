@@ -17,7 +17,7 @@ const HomePage = () => {
                 </Col>
                 <Col xs='4'>
                     <Route exact path = "/"><LoginForm /></Route>
-                    <ProtectedRoute exact path="/letmein" component={SavedList} />
+                    <ProtectedRoute exact path="/letmein" component={() => <SavedList props={'hello'} />} />
                 </Col>
             </Row>
         </Container>
