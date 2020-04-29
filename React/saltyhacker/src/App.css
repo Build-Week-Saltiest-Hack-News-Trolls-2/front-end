@@ -43,3 +43,7 @@ nav a{
 .saved-comments .comment-text {
   width: 100%;
 }
+
+.btn {
+  width: 100px;
+}
