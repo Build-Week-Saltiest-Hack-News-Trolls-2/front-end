@@ -1,13 +1,16 @@
 import React from 'react'
 import Comment from './Comment'
+import { ListGroup, ListGroupItem } from 'reactstrap'
 
 
 const CommentList = ({comments, saveComment}) => {
 
     return (
-        <div>
+        <div className='comments'>
             <h2>Top Saltiest Comments</h2>
+            <ListGroup>
             {comments.map(comment => <Comment entry={comment} key={comment.id} onClick={saveComment} buttonText={'Save'} />)}
+            </ListGroup>
         </div>
     )
 }
