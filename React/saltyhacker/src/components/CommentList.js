@@ -1,21 +1,13 @@
-import React, { useState, useEffect, useContext } from 'react'
-import styled from 'styled-components'
-import { axiosWithAuth } from '../utils/AxiosWithAuth'
+import React from 'react'
 import Comment from './Comment'
-import axios from 'axios'
-import { Button } from 'reactstrap'
-import {CommentContext} from "../contexts/CommentContext";
 
 
-
-const CommentList = () => {
-    const {comments} = useContext(CommentContext)
+const CommentList = ({comments, saveComment}) => {
 
     return (
         <div>
-        <h2>Top Saltiest Comments</h2>
-        {comments.map(comment => <Comment entry={comment} key={comment.id} />)}
-        
+            <h2>Top Saltiest Comments</h2>
+            {comments.map(comment => <Comment entry={comment} key={comment.id} onClick={saveComment} buttonText={'Save'} />)}
         </div>
     )
 }
