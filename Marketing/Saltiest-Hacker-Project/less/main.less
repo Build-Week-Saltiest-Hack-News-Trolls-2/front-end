@@ -16,7 +16,13 @@
 
     button{
         .custom-btn;
-    }
+
+        &:hover{
+            color:white;
+            border: 3px inset @background-color;
+           background-color: rgb(199, 180, 174);
+        }
+    } 
 
 }
 
@@ -41,6 +47,24 @@
 
     .text{
 
+    p{
+        font-family: @paragraph-font;
+        padding: 2%;
+    }
+
+    img{
+        max-width: 30%;
+
+        &:hover{
+            
+            transform: rotateY(180deg);
+
+            // -ms-transform: rotate(20deg); 
+            // transform: rotate(20deg); 
+        }
+    }
+    
+
         .title-text{
             font-size: 1.7rem;
             width:80%;
@@ -57,7 +81,17 @@
             img{
                 max-width: 90px;
                 // width:10%;
+
             }
+
+            @keyframes example {
+                0%   {color: white;}
+                50%  {color: @text-color;}
+                100% { color:white;}
+            
+              }
+
+              
 
             @media @mobile{
                 width:100%;
@@ -71,6 +105,12 @@
         .title-text :nth-child(2){
             font-size: 1.2rem;
             font-family: @sprinkle-font;
+
+            animation-name: example;
+            animation-duration: 10s;
+          //   animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
         }
 
     }//end text
