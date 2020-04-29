@@ -74,7 +74,7 @@ const LoginForm = props => {
                     console.log({res});
                     localStorage.setItem('token', JSON.stringify(res.data.token))
                     push('/letmein');
-                    window. location. reload(false);
+                    window.location.reload(false);
                 })
                 .catch(err => {
                     alert("Username or Password Incorrect")

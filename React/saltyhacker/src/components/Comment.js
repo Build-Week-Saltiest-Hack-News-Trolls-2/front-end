@@ -1,12 +1,14 @@
 import React from 'react'
 import { Button } from 'reactstrap'
 
+
 const Comment = (props) => {
-    const { entry } = props
+    const { entry, onClick, buttonText } = props
 
     const addButtonIfLogged = () =>{
+
         if(localStorage.getItem("token")){
-            return <Button color="primary" onClick={()=> console.log(entry.id)}>Save</Button>
+            return <Button color={(buttonText === 'Save' ? 'primary' : 'danger')} value={entry.id} onClick={onClick}>{buttonText}</Button>
         }
     }
 
