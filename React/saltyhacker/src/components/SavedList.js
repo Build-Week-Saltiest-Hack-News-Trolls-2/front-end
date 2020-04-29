@@ -15,8 +15,7 @@ useEffect(() => {
     //saveComment()
     axiosWithAuth().get("/api/comments/")
     .then(res => {
-        setSavedList([...savedList, res.data])
-        // push history to homepage 
+        setSavedList([...savedList, res.data]) 
     })
     .catch(err => console.log(err))
 },[comments])

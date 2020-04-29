@@ -28,6 +28,8 @@ function App() {
       <div className="App">
         <CommentContext.Provider value={{comments, setComments}}>
           <Header />
+        </CommentContext.Provider>
+        <CommentContext.Provider value={{comments, setComments}}>
           <HomePage />
         </CommentContext.Provider>
       </div>
