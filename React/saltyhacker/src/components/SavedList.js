@@ -1,15 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
-import { axiosWithAuth } from '../utils/AxiosWithAuth'
+import React from "react";
 import Comment from './Comment'
-import {CommentContext} from "../contexts/CommentContext"
 
 const SavedList = ({savedList, deleteComment}) => {
 
-
-const {comments} = useContext(CommentContext)
-
-
-    if (savedList === undefined || savedList.length == 0) {
+    if (savedList === undefined || savedList.length === 0) {
         return (
             <div>
                 <h2>Saved List</h2>
@@ -22,7 +16,7 @@ const {comments} = useContext(CommentContext)
     return(
     <div>
         <h1>Saved List</h1>
-        {savedList.map(saved => <Comment entry={saved} key={saved.id} onClick={deleteComment}/>)}
+        {savedList.map(saved => <Comment entry={saved} key={saved.id} onClick={deleteComment} buttonText='Delete' />)}
     </div>
     
         

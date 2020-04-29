@@ -3,11 +3,12 @@ import { Button } from 'reactstrap'
 
 
 const Comment = (props) => {
-    const { entry, onClick } = props
+    const { entry, onClick, buttonText } = props
 
     const addButtonIfLogged = () =>{
+
         if(localStorage.getItem("token")){
-            return <Button color="primary" value={entry.id} onClick={onClick}>Save</Button>
+            return <Button color={(buttonText === 'Save' ? 'primary' : 'danger')} value={entry.id} onClick={onClick}>{buttonText}</Button>
         }
     }
 
