@@ -3,24 +3,13 @@ import { axiosWithAuth } from '../utils/AxiosWithAuth'
 import Comment from './Comment'
 import {CommentContext} from "../contexts/CommentContext"
 
-const SavedList = () => {
+const SavedList = ({savedList, deleteComment}) => {
 
-const [savedList, setSavedList] = useState()
-const [toAdd, setToAdd] = useState(null)
+
 const {comments} = useContext(CommentContext)
 
 
-
-useEffect(() => {
-    //saveComment()
-    axiosWithAuth().get("/api/comments/")
-    .then(res => {
-        setSavedList([...savedList, res.data]) 
-    })
-    .catch(err => console.log(err))
-},[comments])
-
-    if (savedList === undefined || savedList.length === 0) {
+    if (savedList === undefined || savedList.length == 0) {
         return (
             <div>
                 <h2>Saved List</h2>
@@ -33,7 +22,7 @@ useEffect(() => {
     return(
     <div>
         <h1>Saved List</h1>
-        {savedList.map(saved => <Comment entry={saved} key={saved.id} />)}
+        {savedList.map(saved => <Comment entry={saved} key={saved.id} onClick={deleteComment}/>)}
     </div>
     
         
