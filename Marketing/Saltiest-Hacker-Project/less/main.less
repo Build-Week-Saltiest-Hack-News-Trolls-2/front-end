@@ -23,8 +23,17 @@
             background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
             text-shadow: 6px 2px 2px @accent-color;
         }
+           
+
+        @media @mobile{
+            width:100%;
+        }
     } 
 
+    @media @mobile{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .container{
@@ -63,7 +72,11 @@
             // -ms-transform: rotate(20deg); 
             // transform: rotate(20deg); 
         }
-    }
+
+        @media @mobile{
+            max-width:60%;
+        }
+    } //end of img
     
 
         .title-text{
