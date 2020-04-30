@@ -18,7 +18,8 @@
 
 
 .main_container{
-    background-color: @background-color;
+   // background-color: @background-color;
+   background-image: url(/images/sparkles.gif);
     margin: 2% 2%;
     border: 1px inset @accent-color;
     padding: 4% 4%;
@@ -26,7 +27,7 @@
     font-size: 1.6rem;
     font-family: @sprinkle-font;
     text-shadow: 2px 2px 3px @accent-color;
-
+    
     // h3{
     //     font-family: @header-font;
     //     font-size: 1.8rem;
@@ -41,23 +42,53 @@
         flex-wrap:wrap;
         // flex-direction: column;
 
-        
+      h2{
+         color:rgba(0, 0, 0, 0.582);
+         text-shadow: 2px 2px 0px rgb(224, 126, 65);
+        text-align:center;
+         padding-bottom:2%;
+
+         @keyframes example2 {
+          0%   {color: rgba(0, 0, 0, 0.582);}
+          50%  {color: @text-color;}
+          100% { color:rgba(0, 0, 0, 0.582);}
+        }
+        animation-name: example2;
+        animation-duration: 10s;
+      //   animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+       
+      }  
 
         .projectLead{
                  position: relative;
             
 
-                 border: 2px inset @accent-color;
+                 border: 5px inset @header-color;
                  padding:2%;
+                 padding-right:3.5%;
                 margin: 2%;
                  display:flex;
                  flex-direction: column;
                 justify-content: center;
                 align-items: center;
 
-                background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
-
+                 background-image: repeating-radial-gradient(@accent-color,@text-color 10%, @header-color 10%, @text-color 40%);
+                //background-image: url(/images/bubbles.gif);
+                
                 img{
+                  border-radius:200px;
+
+                  position: relative;
+
+                  padding:6%;
+                  margin:0 auto;
+
+                  border: 5px inset @header-color;
+                  //background-image: repeating-radial-gradient(@accent-color,@text-color 10%, @header-color 10%, @text-color 40%);
+                background-image: url(/images/bubbles.gif);
+                  width:90%;
 
                 @media @mobile{
                     width:80%;
@@ -163,7 +194,7 @@
         .MLEngineer{
        
 
-            border: 2px inset @accent-color;
+            border: 5px inset @header-color;
                  padding:2% 6%;
                 margin: 2%;
                 display:flex;
@@ -171,13 +202,13 @@
                justify-content: center;
                align-items: center;
 
-               background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
+               //background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
+               background-image: repeating-radial-gradient(@accent-color,@text-color 10%, @header-color 10%, @text-color 40%);
 
                .pics{
                 display:flex;
                 justify-content: center;
                 align-items: center;
-                
                 .singlePic{
                     position: relative;
 
@@ -189,8 +220,10 @@
                     padding:2%;
                     margin:0 auto;
 
-                    border: 1px inset @header-color;
-
+                    border: 5px inset @header-color;
+                    //background-image: repeating-radial-gradient(@accent-color,@text-color 10%, @header-color 10%, @text-color 40%);
+                  background-image: url(/images/bubbles.gif);
+                  border-radius:200px;
                     .overlay {
                         // position: absolute;
                         top: 0;
@@ -303,8 +336,10 @@
                 }
 
                 img{
+                  border-radius:200px;
+
                     @media @mobile{
-                        width:80%;
+                        width:90%;
                     }
                 }
 

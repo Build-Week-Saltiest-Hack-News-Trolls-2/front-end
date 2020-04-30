@@ -115,16 +115,23 @@ nav .logo {
   align-items: center;
   height: 10vh;
 }
-nav img {
+nav .logo img {
   height: 10vh;
+  border-radius: 20px;
 }
-nav img:hover {
+nav .logo img:hover {
   transform: rotateY(180deg);
 }
 @media (max-width:700px) {
-  nav img {
+  nav .logo img {
     height: 8vh;
-    width: 100%;
+    width: 8vh;
+    border-radius: 100px;
+  }
+}
+@media (max-width:700px) {
+  nav .logo {
+    flex-direction: column;
   }
 }
 nav .links {
@@ -184,7 +191,6 @@ nav .links a:nth-child(2):hover {
   height: 5vh;
 }
 * {
-  background-color: background-color;
   font-size: 1.6rem;
   font-family: 'Kanit', sans-serif;
   color: #000000;
@@ -210,8 +216,8 @@ nav .links a:nth-child(2):hover {
 }
 .buttons button:hover {
   color: white;
-  border: 3px inset #C46022;
-  background-image: radial-gradient(circle, #D8CBC7, #000000, #C46022);
+  border: 2px inset #C46022;
+  background-image: url(/images/bubbles.gif);
   text-shadow: 6px 2px 2px #F34213;
 }
 @media (max-width:700px) {
@@ -317,7 +323,7 @@ nav .links a:nth-child(2):hover {
   transform: rotateY(180deg);
 }
 .main_container {
-  background-color: #D8CBC7;
+  background-image: url(/images/sparkles.gif);
   margin: 2% 2%;
   border: 1px inset #F34213;
   padding: 4% 4%;
@@ -331,16 +337,47 @@ nav .links a:nth-child(2):hover {
   align-items: center;
   flex-wrap: wrap;
 }
+.main_container .pictures h2 {
+  color: rgba(0, 0, 0, 0.582);
+  text-shadow: 2px 2px 0px #e07e41;
+  text-align: center;
+  padding-bottom: 2%;
+  animation-name: example2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+@keyframes example2 {
+  0% {
+    color: rgba(0, 0, 0, 0.582);
+  }
+  50% {
+    color: #000000;
+  }
+  100% {
+    color: rgba(0, 0, 0, 0.582);
+  }
+}
 .main_container .pictures .projectLead {
   position: relative;
-  border: 2px inset #F34213;
+  border: 5px inset #C46022;
   padding: 2%;
+  padding-right: 3.5%;
   margin: 2%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: radial-gradient(circle, #D8CBC7, #000000, #C46022);
+  background-image: repeating-radial-gradient(#F34213, #000000 10%, #C46022 10%, #000000 40%);
+}
+.main_container .pictures .projectLead img {
+  border-radius: 200px;
+  position: relative;
+  padding: 6%;
+  margin: 0 auto;
+  border: 5px inset #C46022;
+  background-image: url(/images/bubbles.gif);
+  width: 90%;
 }
 @media (max-width:700px) {
   .main_container .pictures .projectLead img {
@@ -419,14 +456,14 @@ nav .links a:nth-child(2):hover {
   text-align: center;
 }
 .main_container .pictures .MLEngineer {
-  border: 2px inset #F34213;
+  border: 5px inset #C46022;
   padding: 2% 6%;
   margin: 2%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: radial-gradient(circle, #D8CBC7, #000000, #C46022);
+  background-image: repeating-radial-gradient(#F34213, #000000 10%, #C46022 10%, #000000 40%);
 }
 .main_container .pictures .MLEngineer .pics {
   display: flex;
@@ -441,7 +478,9 @@ nav .links a:nth-child(2):hover {
   align-items: center;
   padding: 2%;
   margin: 0 auto;
-  border: 1px inset #C46022;
+  border: 5px inset #C46022;
+  background-image: url(/images/bubbles.gif);
+  border-radius: 200px;
 }
 .main_container .pictures .MLEngineer .pics .singlePic .overlay {
   top: 0;
@@ -534,9 +573,12 @@ nav .links a:nth-child(2):hover {
     flex-direction: column;
   }
 }
+.main_container .pictures .MLEngineer .pics img {
+  border-radius: 200px;
+}
 @media (max-width:700px) {
   .main_container .pictures .MLEngineer .pics img {
-    width: 80%;
+    width: 90%;
   }
 }
 @media (max-width: 1800px) {

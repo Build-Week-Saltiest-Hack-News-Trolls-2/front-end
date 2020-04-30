@@ -1,7 +1,7 @@
 
    
 *{
-    background-color: background-color;
+
     font-size: 1.6rem;
     font-family: @paragraph-font;
     color: @text-color;
@@ -17,10 +17,12 @@
     button{
         .custom-btn;
         background-image: radial-gradient(circle, @background-color, white, @header-color);
+      
         &:hover{
             color:white;
-            border: 3px inset @header-color;
-            background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
+            border: 2px inset @header-color;
+            //background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
+            background-image: url(/images/bubbles.gif);
             text-shadow: 6px 2px 2px @accent-color;
         }
            
@@ -64,6 +66,7 @@
 
     img{
         max-width: 30%;
+        
 
         &:hover{
             
@@ -71,6 +74,7 @@
 
             // -ms-transform: rotate(20deg); 
             // transform: rotate(20deg); 
+            
         }
 
         @media @mobile{
