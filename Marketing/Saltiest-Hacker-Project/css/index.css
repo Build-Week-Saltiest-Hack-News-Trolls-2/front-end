@@ -165,11 +165,6 @@ nav .links a:nth-child(2):hover {
   border-color: #ca682c;
 }
 @media (max-width:700px) {
-  nav .links a {
-    padding: 0 10%;
-  }
-}
-@media (max-width:700px) {
   nav .links {
     justify-content: center;
     align-items: center;
@@ -182,6 +177,7 @@ nav .links a:nth-child(2):hover {
     width: 100%;
     margin: 0 auto;
     padding: 4% 0;
+    height: 20vh;
   }
 }
 #navigation {
@@ -218,6 +214,17 @@ nav .links a:nth-child(2):hover {
   background-image: radial-gradient(circle, #D8CBC7, #000000, #C46022);
   text-shadow: 6px 2px 2px #F34213;
 }
+@media (max-width:700px) {
+  .buttons button {
+    width: 100%;
+  }
+}
+@media (max-width:700px) {
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .container {
   font-size: 1.6rem;
   margin: 2% 2%;
@@ -237,6 +244,11 @@ nav .links a:nth-child(2):hover {
 }
 .container .text img:hover {
   transform: rotateY(180deg);
+}
+@media (max-width:700px) {
+  .container .text img {
+    max-width: 60%;
+  }
 }
 .container .text .title-text {
   font-size: 1.7rem;
@@ -370,7 +382,7 @@ nav .links a:nth-child(2):hover {
 @media (max-width:700px) {
   .main_container .pictures .projectLead .textJake {
     font-size: 1.2rem;
-    top: 55%;
+    top: 60%;
   }
 }
 .main_container .pictures .projectLead .textMarta {
@@ -446,15 +458,12 @@ nav .links a:nth-child(2):hover {
   opacity: 1;
 }
 .main_container .pictures .MLEngineer .pics .singlePic .textMonica {
-  color: #000000;
-  text-shadow: 2px 2px 2px #D8CBC7;
-  background-color: white;
-  width: 80%;
-  padding: 2% 0;
+  color: rgba(0, 0, 0, 0.836);
+  text-shadow: 3px 3px 2px #ff64dd;
   font-size: 1.6rem;
   position: absolute;
   top: 90%;
-  left: 50%;
+  left: 75%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -462,11 +471,11 @@ nav .links a:nth-child(2):hover {
 }
 @media (max-width:700px) {
   .main_container .pictures .MLEngineer .pics .singlePic .textMonica {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 .main_container .pictures .MLEngineer .pics .singlePic .textJessica {
-  color: #000000;
+  color: black;
   text-shadow: 3px 3px 2px #961d96;
   font-size: 1.6rem;
   position: absolute;
