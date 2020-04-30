@@ -1,27 +1,9 @@
-// .headline{
-    
-//     background-color: @header-color;
-//     font-family: @header-font;
-
-//     display:flex;
-//     justify-content:space-between;
-//     align-items: center;
-
-//     // padding-bottom: 30px;
-//     // border-bottom: 4px dashed @accent-color;
-//     // padding:1% 1%;
-//     margin: 0 auto;
-//     img{
-//         // max-width: 10%;
-//     }
-// }
-
 
 .main_container{
    // background-color: @background-color;
    background-image: url(/images/sparkles.gif);
-    margin: 2% 2%;
-    border: 1px inset @accent-color;
+    margin: 1% 1%;
+    border: 6px double @header-color;
     padding: 4% 4%;
 
     font-size: 1.6rem;
@@ -354,5 +336,10 @@
         }
 
     }//end .pictures
+
+    @media @mobile{
+      border:none;
+      margin:0;
+    }
 
 }//end .main_container
