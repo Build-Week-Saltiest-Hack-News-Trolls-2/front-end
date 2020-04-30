@@ -124,8 +124,8 @@ nav .logo img:hover {
 }
 @media (max-width:700px) {
   nav .logo img {
-    height: 8vh;
-    width: 8vh;
+    height: 10vh;
+    width: 10vh;
     border-radius: 100px;
   }
 }
@@ -170,6 +170,7 @@ nav .links a:nth-child(2):hover {
   border-width: 10px;
   border-style: inset;
   border-color: #ca682c;
+  background-image: url(/images/sparkles.gif);
 }
 @media (max-width:700px) {
   nav .links {
@@ -184,11 +185,16 @@ nav .links a:nth-child(2):hover {
     width: 100%;
     margin: 0 auto;
     padding: 4% 0;
-    height: 20vh;
+    height: 30vh;
   }
 }
 #navigation {
   height: 5vh;
+}
+@media (max-width:700px) {
+  #navigation {
+    height: 10vh;
+  }
 }
 * {
   font-size: 1.6rem;
@@ -324,7 +330,6 @@ nav .links a:nth-child(2):hover {
 }
 .main_container {
   background-image: url(/images/sparkles.gif);
-  margin: 1% 1%;
   border: 6px double #C46022;
   padding: 4% 4%;
   font-size: 1.6rem;
@@ -403,46 +408,69 @@ nav .links a:nth-child(2):hover {
   text-shadow: 2px 2px 2px whitesmoke;
   font-size: 1.6rem;
   position: absolute;
-  top: 30%;
-  left: 50%;
-  text-align: center;
-}
-.main_container .pictures .projectLead .textJake {
-  color: #000000;
-  text-shadow: 3px 3px 2px #ff44f6;
-  font-size: 1.6rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-}
-@media (max-width:700px) {
-  .main_container .pictures .projectLead .textJake {
-    font-size: 1.2rem;
-    top: 60%;
-  }
-}
-.main_container .pictures .projectLead .textMarta {
-  text-shadow: 2px 2px 2px #F34213;
-  font-size: 1.6rem;
-  position: absolute;
-  top: 90%;
+  top: 40%;
   left: 70%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.main_container .pictures .projectLead .textIan {
-  text-shadow: 2px 2px 2px yellow;
+@media (max-width:700px) {
+  .main_container .pictures .projectLead .textJames {
+    font-size: 1.2rem;
+  }
+}
+.main_container .pictures .projectLead .textJake {
+  color: #000000;
+  text-shadow: 3px 3px 2px #44ff98;
   font-size: 1.6rem;
   position: absolute;
-  top: 90%;
-  left: 80%;
+  top: 80%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+@media (max-width:700px) {
+  .main_container .pictures .projectLead .textJake {
+    font-size: 1.2rem;
+  }
+}
+.main_container .pictures .projectLead .textMarta {
+  text-shadow: 2px 2px 2px orange;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 85%;
+  left: 62%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media (max-width:700px) {
+  .main_container .pictures .projectLead .textMarta {
+    font-size: 1.3rem;
+    top: 25%;
+    left: 50%;
+  }
+}
+.main_container .pictures .projectLead .textIan {
+  text-shadow: 2px 2px 2px yellow;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media (max-width:700px) {
+  .main_container .pictures .projectLead .textIan {
+    top: 25%;
+    font-size: 1.2rem;
+  }
 }
 .main_container .pictures .projectLead .textSteven {
   text-shadow: 2px 2px 2px #9ceaf0;
@@ -454,6 +482,11 @@ nav .links a:nth-child(2):hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-90%, -100%);
   text-align: center;
+}
+@media (max-width:700px) {
+  .main_container .pictures .projectLead .textSteven {
+    font-size: 1.3rem;
+  }
 }
 .main_container .pictures .MLEngineer {
   border: 5px inset #C46022;
@@ -502,7 +535,7 @@ nav .links a:nth-child(2):hover {
   font-size: 1.6rem;
   position: absolute;
   top: 90%;
-  left: 75%;
+  left: 55%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -510,7 +543,8 @@ nav .links a:nth-child(2):hover {
 }
 @media (max-width:700px) {
   .main_container .pictures .MLEngineer .pics .singlePic .textMonica {
-    font-size: 1.2rem;
+    top: 85%;
+    font-size: 1.1rem;
   }
 }
 .main_container .pictures .MLEngineer .pics .singlePic .textJessica {
@@ -525,12 +559,18 @@ nav .links a:nth-child(2):hover {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+@media (max-width:700px) {
+  .main_container .pictures .MLEngineer .pics .singlePic .textJessica {
+    top: 85%;
+    font-size: 1.3rem;
+  }
+}
 .main_container .pictures .MLEngineer .pics .singlePic .textAndy {
   text-shadow: 2px 2px 2px #ffff00;
   font-size: 1.6rem;
   position: absolute;
   top: 80%;
-  left: 50%;
+  left: 55%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-90%, -10%);
@@ -538,15 +578,17 @@ nav .links a:nth-child(2):hover {
 }
 @media (max-width:700px) {
   .main_container .pictures .MLEngineer .pics .singlePic .textAndy {
+    top: 70%;
+    left: 60%;
     font-size: 1.2rem;
   }
 }
 .main_container .pictures .MLEngineer .pics .singlePic .textKatrina {
-  text-shadow: 2px 2px 2px #52ebff;
+  text-shadow: 2px 2px 2px #4cb6c4;
   font-size: 1.6rem;
   position: absolute;
-  top: 15%;
-  left: 75%;
+  top: 10%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -554,19 +596,25 @@ nav .links a:nth-child(2):hover {
 }
 @media (max-width:700px) {
   .main_container .pictures .MLEngineer .pics .singlePic .textKatrina {
+    top: 15%;
     font-size: 1.2rem;
   }
 }
 .main_container .pictures .MLEngineer .pics .singlePic .textColin {
-  text-shadow: 2px 2px 2px #C46022;
+  text-shadow: 2px 2px 2px #ffd000;
   font-size: 1.6rem;
   position: absolute;
   top: 15%;
-  left: 75%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+@media (max-width:700px) {
+  .main_container .pictures .MLEngineer .pics .singlePic .textColin {
+    font-size: 1.3rem;
+  }
 }
 @media (max-width: 1800px) {
   .main_container .pictures .MLEngineer .pics {
