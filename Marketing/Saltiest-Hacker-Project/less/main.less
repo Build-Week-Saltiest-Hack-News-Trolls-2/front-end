@@ -23,8 +23,17 @@
             background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
             text-shadow: 6px 2px 2px @accent-color;
         }
+           
+
+        @media @mobile{
+            width:100%;
+        }
     } 
 
+    @media @mobile{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .container{
