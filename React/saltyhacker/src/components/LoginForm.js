@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import {axiosWithAuth} from "../utils/AxiosWithAuth";
 import styled from "styled-components";
 import { Form, Label, Input, Button } from 'reactstrap'
-import {useHistory} from "react-router-dom";
+import {useHistory, useParams} from "react-router-dom";
 import * as yup from 'yup'
    
 const AltInstructions = styled.span`
@@ -27,6 +27,7 @@ const initialErrors = {
 }
 
 const LoginForm = props => {
+    const {register} = useParams()
     const {push} = useHistory();
     const [errors, setErrors] = useState(initialErrors)
     const [canSubmit, setCanSubmit] = useState(false)
@@ -35,6 +36,10 @@ const LoginForm = props => {
         username: "",
         password: ""
     })
+
+    if (register === 1) {
+        setNeedsAccount(true)
+    }
 
     const handleChanges = e => {
         setCredentials({

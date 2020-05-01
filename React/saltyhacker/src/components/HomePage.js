@@ -3,7 +3,7 @@ import CommentList from './CommentList'
 import { Container, Row, Col } from 'reactstrap'
 import LoginForm from './LoginForm'
 import ProtectedRoute from "./ProtectedRoute"
-import { Route } from "react-router-dom"
+import { Route, Switch } from "react-router-dom"
 import SavedList from "./SavedList"
 import {axiosWithAuth} from '../utils/AxiosWithAuth'
 
@@ -91,8 +91,12 @@ const HomePage = ({comments, isLoading}) => {
                     <CommentList comments={comments} saveComment={saveComment} />
                 </Col>
                 <Col xs='4'>
-                    <Route exact path = "/"><LoginForm /></Route>
-                    <ProtectedRoute exact path="/letmein" component={() => <SavedList savedList={savedList} deleteComment={deleteComment} fadeIn={fadeIn}/>} />
+                    <Switch>
+                        <ProtectedRoute exact path="/letmein" component={() => <SavedList savedList={savedList} deleteComment={deleteComment} fadeIn={fadeIn}/>} />
+                    </Switch>
+                    <Switch>
+                        <Route exact path = "/"><LoginForm /></Route>
+                    </Switch>
                 </Col>
             </Row>
         </Container>
