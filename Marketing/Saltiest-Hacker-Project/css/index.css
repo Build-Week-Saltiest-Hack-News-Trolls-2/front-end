@@ -238,11 +238,12 @@ nav .links a:nth-child(2):hover {
   }
 }
 .container {
+  border: solid transparent 15px;
+  border-image: url(/images/bubbles.gif) 20 round;
   font-size: 1.6rem;
   margin: 2% 2%;
   padding: 4% 4%;
   background-color: #D8CBC7;
-  border: inset #C46022 1px;
 }
 .container section {
   padding-bottom: 10%;
