@@ -220,11 +220,16 @@ nav .links a:nth-child(2):hover {
   text-shadow: 5px 2px 2px #C46022;
   background-image: radial-gradient(circle, #D8CBC7, white, #C46022);
 }
+.buttons button a {
+  text-decoration: none;
+}
 .buttons button:hover {
-  color: white;
   border: 2px inset #C46022;
   background-image: url(/images/bubbles.gif);
   text-shadow: 6px 2px 2px #F34213;
+}
+.buttons button:hover a {
+  color: white;
 }
 @media (max-width:700px) {
   .buttons button {
