@@ -21,14 +21,19 @@
         .custom-btn;
         background-image: radial-gradient(circle, @background-color, white, @header-color);
       
+        a{
+            text-decoration: none;
+        }
+
         &:hover{
-            color:white;
+            a{ color:white;}
+           
             border: 2px inset @header-color;
             //background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
             background-image: url(/images/bubbles.gif);
             text-shadow: 6px 2px 2px @accent-color;
         }
-           
+        
 
         @media @mobile{
             width:100%;
