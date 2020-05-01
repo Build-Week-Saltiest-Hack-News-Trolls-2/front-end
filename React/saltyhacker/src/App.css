@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+.comment-username {
+  width: 20%;
+  text-align: center
+}
+.comment-text {
+  width:75%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.comment {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav a:hover{
+  text-decoration: none;
+  color: rgb(58, 58, 58);
+}
+
+.RightSideWrapper{
+  margin: 3% auto;
+  border: 3px solid #F34213;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 3%;
 }
 
-.App-link {
-  color: #61dafb;
+.RightSideWrapper input {
+  margin: 1.5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.errors {
+  color: red;
+}
+
+.RightSideWrapper .comment {
+  flex-direction: column;
+}
+
+.RightSideWrapper .comment-text {
+  width: 100%;
+}
+
+.btn {
+  width: 100px;
+  height: 50px;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Kanit', sans-serif
+}
+
+p, a, span, button, label {
+  font-family: 'Nunito', sans-serif;
 }
