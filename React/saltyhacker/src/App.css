@@ -11,6 +11,9 @@
   display: flex;
   flex-direction: row;
   justify-content:space-between;
+  align-items: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 nav a{
@@ -49,6 +52,10 @@ nav a:hover{
   width: 100%;
 }
 
+.btn {
+  width: 100px;
+  height: 50px;
+}
 h1, h2, h3, h4, h5, h6{
   font-family: 'Kanit', sans-serif
 }

@@ -11,7 +11,7 @@ margin: 0 auto;
 justify-content: space-between;
 align-items: center;
 background: #C46022;
-padding 0.3% 1%;
+padding: 0.3% 1%;
 margin-bottom: 60px;
 `
 const SearchWrapper = styled.div`
@@ -20,7 +20,7 @@ width: 30%;
 const SearchBar = styled.input`
 width: 60%;
 `
-
+// {handleChanges, submitSearch, searchText}
 const Header = () =>{
     const [searchText, setSearchText] = useState("");
     const {setComments} = useContext(CommentContext);
@@ -28,7 +28,7 @@ const Header = () =>{
     const [commentList, setCommentList] = useState([]);
 
     useEffect(()=> {
-        axios.get("https://shnt.herokuapp.com/api/comments/all")
+        axios.get("https://kraf-saltyhacker.herokuapp.com/stats/comments/all")
         .then(res => {
             setCommentList(res.data)
         })
@@ -47,13 +47,13 @@ const Header = () =>{
 
     const submitSearch = e => {
         e.preventDefault();
-        const searchResults = [];
         const input = searchText.toLowerCase();
-        for(let i=0; i<commentList.length; i++){
-            if(commentList[i].user.toLowerCase().includes(input)){
-                searchResults.push(commentList[i]);
+        const searchResults = commentList.filter( comment => {
+            if (comment.user != null) {
+                return comment.user.toLowerCase().includes(input)
             }
-        }
+            
+        })
         setComments(searchResults);
     }
 
