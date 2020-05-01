@@ -5,7 +5,7 @@ const SavedList = ({savedList, deleteComment, fadeIn}) => {
 
     if (savedList === undefined || savedList.length === 0) {
         return (
-            <div>
+            <div className='RightSideWrapper'>
                 <h2>Saved List</h2>
                 <p>No Saved Items.</p>
             </div>
@@ -14,7 +14,7 @@ const SavedList = ({savedList, deleteComment, fadeIn}) => {
     }    
 
     return(
-    <div className='saved-comments'>
+    <div className='RightSideWrapper'>
         <h2>Saved List</h2>
         {savedList.map(saved => <Comment entry={saved} key={saved.id} onClick={deleteComment} fadeIn={fadeIn} buttonText='Remove' />)}
     </div>

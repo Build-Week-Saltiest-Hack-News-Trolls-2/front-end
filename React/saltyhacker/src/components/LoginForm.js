@@ -94,7 +94,7 @@ const LoginForm = props => {
     }
 
     return(
-        <div className="LoginWrapper">
+        <div className="RightSideWrapper">
             <h2>{(!needsAccount) ? "Log In" : "Create an Account"}</h2>
             <Form onSubmit={handleSubmit}>
                 <Label htmlFor="Username" >Username</Label>
