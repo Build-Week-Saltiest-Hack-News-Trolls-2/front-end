@@ -1,7 +1,7 @@
 import React from "react";
 import Comment from './Comment'
 
-const SavedList = ({savedList, deleteComment}) => {
+const SavedList = ({savedList, deleteComment, fadeIn}) => {
 
     if (savedList === undefined || savedList.length === 0) {
         return (
@@ -16,7 +16,7 @@ const SavedList = ({savedList, deleteComment}) => {
     return(
     <div className='saved-comments'>
         <h2>Saved List</h2>
-        {savedList.map(saved => <Comment entry={saved} key={saved.id} onClick={deleteComment} buttonText='Remove' />)}
+        {savedList.map(saved => <Comment entry={saved} key={saved.id} onClick={deleteComment} fadeIn={fadeIn} buttonText='Remove' />)}
     </div>
     
         

@@ -1,9 +1,9 @@
 import React from 'react'
-import { Button, ListGroupItem } from 'reactstrap'
+import { Button, ListGroupItem, Fade } from 'reactstrap'
 
 
 const Comment = (props) => {
-    const { entry, onClick, buttonText } = props
+    const { entry, onClick, buttonText, fadeIn } = props
 
     const addButtonIfLogged = () =>{
 
@@ -15,10 +15,10 @@ const Comment = (props) => {
     return (
         <ListGroupItem>
             <div className='comment'>
-                <div className='comment-username'>
+                {/* <div className='comment-username'>
                     <h3>{entry.user}</h3>
-                </div>
-                <div className='comment-text'>{entry.comment}</div>
+                </div> */}
+                <div className='comment-text'><h3>{entry.user}</h3><p>{entry.text}{entry.comment}</p></div>
                 {addButtonIfLogged()}
             </div>
         </ListGroupItem>

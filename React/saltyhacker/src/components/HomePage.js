@@ -7,11 +7,21 @@ import { Route } from "react-router-dom"
 import SavedList from "./SavedList"
 import {axiosWithAuth} from '../utils/AxiosWithAuth'
 
-const HomePage = ({comments}) => {
+const HomePage = ({comments, isLoading}) => {
 
     const [savedList, setSavedList] = useState([])
     const [toSave, setToSave] = useState(null)
     const [toDelete, setToDelete] = useState(null)
+    const [fadeIn, setFadeIn] = useState(true)
+
+    const renameKey = obj => {
+        let value = obj.text
+        obj.comment = value
+        obj['text'] = obj['comment']
+        delete obj['text']
+
+        return obj
+    }
     
     const saveComment = (e) => {
         const selectedId = e.target.value
@@ -19,7 +29,8 @@ const HomePage = ({comments}) => {
                 console.log("Already exists")
             } else {
                 const selected = comments.find(comment => comment.id == selectedId)
-                setToSave(selected)
+                const key = renameKey(selected)
+                setToSave(key)
             }
 
     }
@@ -61,7 +72,16 @@ const HomePage = ({comments}) => {
     },[toSave, toDelete])
     
     
-    
+    if (isLoading) {
+        return (
+            <Container>
+                <Row>
+                    <h2>Loading...</h2>
+                </Row>
+            </Container>
+        
+        )
+    }
     
     
     return (
@@ -72,7 +92,7 @@ const HomePage = ({comments}) => {
                 </Col>
                 <Col xs='4'>
                     <Route exact path = "/"><LoginForm /></Route>
-                    <ProtectedRoute exact path="/letmein" component={() => <SavedList savedList={savedList} deleteComment={deleteComment} />} />
+                    <ProtectedRoute exact path="/letmein" component={() => <SavedList savedList={savedList} deleteComment={deleteComment} fadeIn={fadeIn}/>} />
                 </Col>
             </Row>
         </Container>
