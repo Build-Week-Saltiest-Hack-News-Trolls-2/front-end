@@ -18,9 +18,10 @@
     // }
 
     .pictures{
-        display:flex;
-        justify-content: center;
-        align-items: center;
+        // display:flex;
+        // justify-content: center;
+        // align-items: center;
+        .flexus(center,center);
         flex-wrap:wrap;
         // flex-direction: column;
 
@@ -51,10 +52,11 @@
                  padding:2%;
                  padding-right:3.5%;
                 margin: 2%;
-                 display:flex;
-                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                //  display:flex;
+                // justify-content: center;
+                // align-items: center;
+                .flexus(center,center);
+                flex-direction: column;
 
                  background-image: repeating-radial-gradient(@accent-color,@text-color 10%, @header-color 10%, @text-color 40%);
                 //background-image: url(/images/bubbles.gif);
@@ -198,25 +200,28 @@
             border: 5px inset @header-color;
                  padding:2% 6%;
                 margin: 2%;
-                display:flex;
-                flex-direction: column;
-               justify-content: center;
-               align-items: center;
+              //   display:flex;
+              //  justify-content: center;
+              //  align-items: center;
+              .flexus(center,center);
+               flex-direction: column;
 
                //background-image: radial-gradient(circle, @background-color, @text-color, @header-color);
                background-image: repeating-radial-gradient(@accent-color,@text-color 10%, @header-color 10%, @text-color 40%);
 
                .pics{
-                display:flex;
-                justify-content: center;
-                align-items: center;
+                // display:flex;
+                // justify-content: center;
+                // align-items: center;
+                .flexus(center,center);
                 .singlePic{
                     position: relative;
 
-                    display:flex;
+                    // display:flex;
+                    // justify-content: space-around;
+                    // align-items: center;
+                    .flexus(space-around, center);
                     flex-direction: column;
-                    justify-content: space-around;
-                    align-items: center;
 
                     padding:2%;
                     margin:0 auto;

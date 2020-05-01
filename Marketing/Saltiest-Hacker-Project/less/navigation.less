@@ -3,9 +3,10 @@ nav{
     background-color: @header-color;
     font-family: @header-font;
 
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
+    // display:flex;
+    // justify-content:space-between;
+    // align-items: center;
+    .flexus(space-between,center);
 
     // padding-bottom: 30px;
     // border-bottom: 4px dashed @accent-color;
@@ -15,14 +16,16 @@ nav{
 
         .text-logo{
             font-size: 1.2rem;
-            display:flex;
+            // display:flex;
+            // justify-content: center;
+            // align-items:space-between;
+            .flexus(center, space-between);
             flex-direction:column;
-            justify-content: center;
-            align-items:space-between;
-
+           
 
             h1{
                 font-family:@sprinkle-font ;
+                
               
                 }
 
@@ -43,10 +46,10 @@ nav{
         // background-size: 100%;
         // background-repeat: no-repeat;
 
-        display:flex;
-        justify-content: space-between;
-        align-items:center;
-        
+        // display:flex;
+        // justify-content: space-between;
+        // align-items:center;
+        .flexus(space-between,center);
         
         height:10vh;
 
@@ -55,6 +58,7 @@ nav{
             border-radius: 20px;
          //    transition: width 5s;
          // transition-delay: 1s;
+         
      
             &:hover{
              // width: 100%;
@@ -83,9 +87,10 @@ nav{
 
     .links{
         width: 40%;
-        display:flex;
-        justify-content: flex-end;
-        align-items:center;
+        // display:flex;
+        // justify-content: flex-end;
+        // align-items:center;
+        .flexus(flex-end,center);
 
         a{
             font-size: 1.9rem;
@@ -100,6 +105,7 @@ nav{
         // }
 
         &:nth-child(1){
+            
                 border-right: solid 3px @text-color;
                 padding-right:2%;
                 opacity: .7;

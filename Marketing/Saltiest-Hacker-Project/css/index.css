@@ -98,9 +98,9 @@ nav {
 nav .text-logo {
   font-size: 1.2rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: space-between;
+  flex-direction: column;
 }
 nav .text-logo h1 {
   font-family: 'Press Start 2P', cursive;
@@ -371,9 +371,9 @@ nav .links a:nth-child(2):hover {
   padding-right: 3.5%;
   margin: 2%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-image: repeating-radial-gradient(#F34213, #000000 10%, #C46022 10%, #000000 40%);
 }
 .main_container .pictures .projectLead img {
@@ -494,9 +494,9 @@ nav .links a:nth-child(2):hover {
   padding: 2% 6%;
   margin: 2%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-image: repeating-radial-gradient(#F34213, #000000 10%, #C46022 10%, #000000 40%);
 }
 .main_container .pictures .MLEngineer .pics {
@@ -507,9 +507,9 @@ nav .links a:nth-child(2):hover {
 .main_container .pictures .MLEngineer .pics .singlePic {
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   padding: 2%;
   margin: 0 auto;
   border: 5px inset #C46022;
